@@ -1,0 +1,73 @@
+@url=http://localhost:8080/api
+
+
+
+
+
+###Auth
+POST http://localhost:8080/login
+@password=f5562dc1-d0c5-4dab-a7ad-b6dd41a91d0e
+{
+    "username": "user",
+    "passwowd": {{password}}
+}
+
+
+
+### User
+
+
+###Get users
+GET {{url}}/user HTTP/1.1
+Content-Type: application/json
+
+### Create user
+POST {{url}}/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "kromas",
+    "lastName": "Gan",
+    "email": "thomasthetrain",
+    "password": "1234",
+    "role": "ADMIN"
+}
+
+### Project
+
+## Create
+POST {{url}}/project HTTP/1.1
+Content-Type:application/json
+
+{
+    "userId": "1",
+    "url":"http://www.cool.com"
+}
+
+### Get
+GET {{url}}/project HTTP/1.1
+Content-Type: application/json
+
+
+### Get one
+@getId = 8
+GET {{url}}/project/{{getId}} HTTP/1.1
+Content-Type: application/json
+
+### Update project 
+@id =6
+PATCH {{url}}/project/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":6,
+    "name": "Testing",
+    "url": "Testing@url.com"
+}
+
+
+### Delete project
+@deleteId = 5
+DELETE {{url}}/project/{{deleteId}} HTTP/1.1
+Content-type: application/json
+
