@@ -1,10 +1,10 @@
-package com.melvin.oauthauthorizationserver;
+package oauthauthorizationserver.oauth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OauthAuthorizationServerApplicationTests {
+class OauthApplicationTests {
 
 	@Test
 	void contextLoads() {
